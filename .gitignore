@@ -169,3 +169,19 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# gitignore environment variables
+Final_Project/.env
+
+# gitignore Python cache files
+__pycache__/
+*.pyc .gitignore
+
+# gitignore logs
+*.log
+
+# gitignore dependency directories
+node_modules/
+
+# gitignore VS Code settings (optional)
+.vscode/ 

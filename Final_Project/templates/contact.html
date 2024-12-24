@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - E_limo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Contact Us</h1>
+        <p>We're here to assist you! Reach out to any of our team members below.</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="contact-container">
+        <section class="contact-card">
+            <h2>Owner</h2>
+            <p><strong>Name:</strong> James Wanderi</p>
+            <p><strong>Phone:</strong> <a href="tel:0702976596">0702976596</a></p>
+            <p><strong>Email:</strong> <a href="mailto:jaybeemukunya@gmail.com">jaybeemukunya@gmail.com</a></p>
+        </section>
+
+        <section class="contact-card">
+            <h2>General Manager</h2>
+            <p><strong>Name:</strong> Brenda Nyawira</p>
+            <p><strong>Phone:</strong> <a href="tel:0708671022">0708671022</a></p>
+            <p><strong>Email:</strong> <a href="mailto:cessitamukunya@gmail.com">cessitamukunya@gmail.com</a></p>
+        </section>
+
+        <section class="contact-card">
+            <h2>CEO</h2>
+            <p><strong>Name:</strong> Boniface Mukunya</p>
+            <p><strong>Phone:</strong> <a href="tel:0711857271">0711857271</a></p>
+            <p><strong>Email:</strong> <a href="mailto:mukunya62@gmail.com">mukunya62@gmail.com</a></p>
+        </section>
+
+        <section class="contact-card">
+            <h2>COO</h2>
+            <p><strong>Name:</strong> Rose Mukunya</p>
+            <p><strong>Phone:</strong> <a href="tel:0722240863">0722240863</a></p>
+            <p><strong>Email:</strong> <a href="mailto:mukunyarose@gmail.com">mukunyarose@gmail.com</a></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 E_limo Farming App. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#facebook">Facebook</a> | 
+            <a href="#twitter">Twitter</a> | 
+            <a href="#instagram">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

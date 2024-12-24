@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_limo Remote Farm</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to E_limo!</h1>
+        <img src="{{ url_for('static', filename='images/Solar panels & tree.jpg') }}" alt="E_limo Logo" class="logo">
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Main Content Area -->
+        <main>
+            <h2>Your #1 Online Farm Assistant</h2>
+            <p>Access farm services & book appointments. Register or login below:</p>            
+            <a href="{{ url_for('login') }}" class="cta-button">Login</a> 
+            <a href="{{ url_for('register') }}" class="cta-button">Register</a>
+            <br>
+            <img src="{{ url_for('static', filename='images/My_Farm.webp') }}" alt="Farm Scene" class="farm-image" width="800px" height="600px">
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Enquiries</h3>
+            <input type="text" placeholder="Search..." class="search-bar">
+            <ul> 
+                <li><a href="#link1">FAQs</a></li>
+                <li><a href="#link2">Help</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <div id="status" class="status-box">Status: Waiting for action...</div>
+    <button onclick="controlIrrigation('start')" class="action-button">Start Irrigation</button>
+    <button onclick="controlIrrigation('stop')" class="action-button">Stop Irrigation</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 E_limo Farming App. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#facebook">Facebook</a> | 
+            <a href="#twitter">Twitter</a> | 
+            <a href="#instagram">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        function controlIrrigation(action) {
+            fetch(`/api/irrigate`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ 
+                    action: action, 
+                    crop: 'tomato'
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('status').innerText = `Status: ${data.message}`;
+            })
+            .catch(err => console.error("Error:", err));
+        }
+    </script>
+</body>
+</html>

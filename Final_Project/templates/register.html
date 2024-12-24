@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - E_limo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Register for E_limo</h1>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="{{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    
+    <main>
+        <form action="{{ url_for('register') }}" method="POST" class="form-container">
+            <label for="owner-name">Farm Owner's Name:</label>
+            <input type="text" id="owner-name" name="owner_name" required>
+
+            <label for="crop">Crop Planted:</label>
+            <input type="text" id="crop" name="crop" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="planting-date">Date of Planting:</label>
+            <input type="date" id="planting-date" name="planting_date" required>
+
+            <label for="soil-type">Soil Type:</label>
+            <input type="text" id="soil-type" name="soil_type" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="submit-button">Register</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 E_limo Farming App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

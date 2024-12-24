@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - E_limo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>About E_limo</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="about-container">
+        <section class="about-section">
+            <h2>Who We Are</h2>
+            <p>
+                E_limo is a cutting-edge farming technology platform dedicated to revolutionizing agriculture. 
+                We empower farmers with tools to manage their irrigation remotely, saving water, time, and energy.
+                Our mission is to enhance productivity and ensure sustainable farming practices for a brighter future.
+            </p>
+        </section>
+
+        <section class="about-section">
+            <h2>Our Mission</h2>
+            <p>
+                To provide farmers with innovative solutions to optimize their agricultural processes, 
+                improve yields, and contribute to global food security.
+            </p>
+        </section>
+
+        <section class="about-section">
+            <h2>What We Offer</h2>
+            <ul>
+                <li>Remote irrigation control with smart technology</li>
+                <li>Monthly seminars and workshops on sustainable farming</li>
+                <li>Educational resources to empower farmers</li>
+                <li>Personalized support and expert advice</li>
+            </ul>
+        </section>
+
+        <section class="about-section">
+            <h2>Why Choose E_limo?</h2>
+            <p>
+                At E_limo, we combine technology with a passion for agriculture. 
+                Our solutions are designed to meet the unique challenges of modern farming, 
+                helping farmers achieve success while protecting the environment.
+            </p>
+        </section>
+
+        <section class="about-section">
+            <h2>Join Our Community</h2>
+            <p>
+                Be part of the growing E_limo family. Sign up today to experience the future of farming!
+            </p>
+            <a href="{{ url_for('register') }}" class="cta-button">Register Now</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 E_limo Farming App. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#facebook">Facebook</a> | 
+            <a href="#twitter">Twitter</a> | 
+            <a href="#instagram">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - E_limo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Our Services</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="services-container">
+        <section class="service">
+            <h2>Awareness of Our Technology</h2>
+            <p>We are committed to educating farmers about our advanced irrigation technology and its potential to revolutionize farming practices.</p>
+        </section>
+
+        <section class="service">
+            <h2>Installation</h2>
+            <p>Our team of experts ensures seamless installation of E_limo systems tailored to your farm’s unique needs.</p>
+        </section>
+
+        <section class="service">
+            <h2>Maintenance & Servicing</h2>
+            <p>We provide regular maintenance and servicing to keep your irrigation systems in optimal condition throughout the year.</p>
+        </section>
+
+        <section class="service">
+            <h2>Educational Training</h2>
+            <p>We conduct hands-on training to help farmers and their teams use our systems effectively, maximizing their farm's potential.</p>
+        </section>
+
+        <section class="service">
+            <h2>Monthly Seminars</h2>
+            <p>Join our monthly seminars to stay updated on the latest in smart farming, including demonstrations of new features and technologies.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 E_limo Farming App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
